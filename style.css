@@ -5,24 +5,28 @@
 
 body {
     margin: 0;
-    min-height: 100vh;
-    background: url("fondo.png") center center / cover no-repeat fixed;
-    overflow-x: hidden;
 }
 
-/* OVERLAY */
-.overlay {
+/* FONDO */
+#fondo {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: -1;
+    background: url("fondo.png") center center / cover no-repeat;
+    z-index: 0;
+}
+
+/* OSCURECER */
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
 }
 
 /* CONTENIDO */
 .contenido {
-    padding: 30px;
     position: relative;
     z-index: 1;
+    padding: 30px;
 }
 
 /* HEADER */
@@ -34,18 +38,6 @@ header {
 
 .logo {
     width: 110px;
-    margin-bottom: 10px;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 48px;
-    letter-spacing: 2px;
-}
-
-header h2 {
-    margin: 5px 0 0;
-    font-weight: normal;
 }
 
 /* COLUMNAS */
@@ -63,27 +55,6 @@ header h2 {
     padding: 25px;
     width: 32%;
     box-shadow: 0 20px 40px rgba(0,0,0,0.25);
-    transition: transform 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-8px);
-}
-
-.card h3 {
-    text-align: center;
-    margin-top: 0;
-}
-
-.sub {
-    text-align: center;
-    font-weight: bold;
-}
-
-/* LISTAS */
-.card ul,
-.card ol {
-    padding-left: 20px;
 }
 
 /* REDES */
@@ -91,16 +62,10 @@ header h2 {
     display: flex;
     justify-content: center;
     gap: 25px;
-    margin-top: 20px;
 }
 
 .redes img {
     width: 52px;
-    transition: transform 0.2s ease;
-}
-
-.redes img:hover {
-    transform: scale(1.25);
 }
 
 /* FOOTER */
