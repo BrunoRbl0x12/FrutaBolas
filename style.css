@@ -12,11 +12,11 @@ body {
 /* FONDO */
 .fondo {
     position: fixed;
-    inset: 0;
-    background-image: url("fondo.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
     z-index: -2;
 }
 
@@ -134,3 +134,4 @@ footer {
     color: white;
     margin-top: 25px;
 }
+
