@@ -49,16 +49,23 @@
                 </p>
 
                 <h4>Redes sociales</h4>
+
                 <div class="redes">
-                    <a href="https://www.youtube.com/@FrutaBolas" target="_blank">
+                    <button onclick="mostrarRed('youtube')">
                         <img src="icons/youtubelogo.png" alt="YouTube">
-                    </a>
-                    <a href="https://www.tiktok.com/@frutabolas_" target="_blank">
+                    </button>
+
+                    <button onclick="mostrarRed('tiktok')">
                         <img src="icons/tiktoklogo.png" alt="TikTok">
-                    </a>
-                    <a href="https://discord.com/invite/fCPFvy76jn" target="_blank">
+                    </button>
+
+                    <button onclick="mostrarRed('discord')">
                         <img src="icons/discordlogo.png" alt="Discord">
-                    </a>
+                    </button>
+                </div>
+
+                <div id="link-red" class="link-red">
+                    Presioná un botón para ver la red social
                 </div>
             </section>
 
@@ -85,11 +92,34 @@
 
         </main>
 
+        <!-- FOOTER -->
         <footer>
             © 2026 FrutaBolas
         </footer>
 
     </div>
+
+    <!-- SCRIPT MOTD SAFE -->
+    <script>
+    function mostrarRed(red) {
+        const contenedor = document.getElementById("link-red");
+
+        if (red === "youtube") {
+            contenedor.innerHTML =
+                'YouTube: <b>youtube.com/@FrutaBolas</b>';
+        }
+
+        if (red === "tiktok") {
+            contenedor.innerHTML =
+                'TikTok: <b>tiktok.com/@frutabolas_</b>';
+        }
+
+        if (red === "discord") {
+            contenedor.innerHTML =
+                'Discord: <b>discord.gg/fCPFvy76jn</b>';
+        }
+    }
+    </script>
 
 </body>
 </html>
